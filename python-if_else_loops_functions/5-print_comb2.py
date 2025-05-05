@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-for i in range(0, 99):
-    print(f"{i:02d}", end=", ")
-print(f"{i + 1:02d}", end="")
+for i in range(0, 100):
+    if i == 99:
+        print(f"{i:02d}", end='\n')
+    else:
+        print(f"{i:02d}", end=', ')

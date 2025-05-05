@@ -6,4 +6,4 @@ def uppercase(str):
             str_MAJ = str_MAJ + chr(ord(str[i]) - 32)
         else:
             str_MAJ = str_MAJ + str[i]
-    print(str_MAJ)
+    print(f"{str_MAJ}")
