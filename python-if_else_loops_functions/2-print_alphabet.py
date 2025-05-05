@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print(f"abcdefghijklmnopqrstuvwxyz", end='')
+for i in range(26):
+    print({chr(97 + i)}, end='')
