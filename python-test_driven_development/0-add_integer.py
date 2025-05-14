@@ -11,6 +11,10 @@ def add_integer(a, b=98):
     100
     >>> add_integer(100.3, -2)
     98
+    >>> add_integer(-5.7, -1.2)
+    -6
+    >>> add_integer(0, 0)
+    0
     >>> add_integer(4, "School")
     Traceback (most recent call last):
         ...
@@ -31,8 +35,18 @@ def add_integer(a, b=98):
     10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
     >>> add_integer(True, 3)
     4
+    >>> add_integer(False, False)
+    0
     >>> add_integer(5.9, 1.1)
     6
+    >>> add_integer([1, 2], 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(3, {2})
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
     """
 
     if not isinstance(a, (int, float)):
