@@ -5,7 +5,17 @@
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 >>> matrix_divided([[2, 3.5], [4.5, 8]], 0.5)
 [[4.0, 7.0], [9.0, 16.0]]
+>>> matrix_divided([[-2, -4], [-6, -8]], 2)
+[[-1.0, -2.0], [-3.0, -4.0]]
+>>> matrix_divided([[5]], 2)
+[[2.5]]
+>>> matrix_divided([[1, 2]], 0.1)
+[[10.0, 20.0]]
 >>> matrix_divided([[2, 2]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, None], [2, 3]], 2)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
