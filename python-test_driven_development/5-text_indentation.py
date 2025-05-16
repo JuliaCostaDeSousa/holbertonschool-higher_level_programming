@@ -32,8 +32,8 @@ def text_indentation(text):
         print(character, end="")
         if character in ['.', '?', ':']:
             while text_line[0] == " ":
-                line = line[1:]
+                text_line = text_line[1:]
             while text_line[-1] == " ":
-                line = line[:-1]
+                text_line = text_line[:-1]
             print("\n")
-            line = []
+            text_line = []
