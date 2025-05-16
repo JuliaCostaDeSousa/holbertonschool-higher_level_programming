@@ -31,9 +31,9 @@ def text_indentation(text):
         text_line.append(character)
         print(character, end="")
         if character in ['.', '?', ':']:
-            if text_line[0] == " ":
+            while text_line[0] == " ":
                 line = line[1:]
-            if text_line[-1] == " ":
+            while text_line[-1] == " ":
                 line = line[:-1]
             print("\n")
             line = []
