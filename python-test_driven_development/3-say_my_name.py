@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a function that prints My name is <first name> <last name>.
+This module gives a function that prints My name is <first name> <last name>.
 
 It handles strings.
 If <first_name> and <last_name> strings, it raises a TypeError.
