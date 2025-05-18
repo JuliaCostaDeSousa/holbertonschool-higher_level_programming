@@ -9,8 +9,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max(self):
         self.assertEqual(max_integer([0, 500, 200, -650]), 500, "Max is wrong")
-        self.assertEqual(max_integer([0, 500, 200, 650]), 500, "Max is wrong")
-        self.assertEqual(max_integer([650, 500, 200, -650]), 500, "Max is wrong")
+        self.assertEqual(max_integer([0, 500, 200, 650]), 650, "Max is wrong")
+        self.assertEqual(max_integer([650, 500, 200, -650]), 650, "Max is wrong")
 
     def test_empty_list(self):
         self.assertIsNone(max_integer([]), "Should return None for empty list")
