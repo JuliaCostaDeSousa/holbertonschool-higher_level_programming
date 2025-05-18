@@ -11,6 +11,8 @@
 [[2.5]]
 >>> matrix_divided([[1, 2]], 0.1)
 [[10.0, 20.0]]
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
 >>> matrix_divided([2, 2], 2)
 Traceback (most recent call last):
 ...
