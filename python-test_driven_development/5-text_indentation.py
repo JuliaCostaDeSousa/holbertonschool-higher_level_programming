@@ -31,10 +31,10 @@ def text_indentation(text):
         i += 1
 
     while i < len(text):
+#        print("text[i] = {}\n".format(text[i]))
         print("{}".format(text[i]), end="")
         if text[i] in ['.', '?', ':', '\n']:
-            print("{}".format(text[i]), end="\n")
-            i +=1
-            while text[i] == " ":
-                i +=1
+            print("{}".format("\n"))
+            while text[i + 1] == " ":
+                i += 1
         i +=1
