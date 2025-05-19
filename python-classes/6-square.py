@@ -43,7 +43,7 @@ class Square:
     @property
     def size(self):
         """
-        Retrieves the area of the current square
+        Retrieves the size of the current square
         """
 
         return self.__size
@@ -100,7 +100,10 @@ class Square:
         Prints in stdout the square with the character #
         If size is equal to 0, print an empty line
         """
-
+        if self.size == 0:
+            print()
+            return
+        
         for h in range(self.__position[1]):
             print()
         if self.__size != 0:
@@ -110,5 +113,3 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-        else:
-            print()

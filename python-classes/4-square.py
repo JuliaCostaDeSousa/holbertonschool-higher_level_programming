@@ -30,7 +30,7 @@ class Square:
     @property
     def size(self):
         """
-        Retrieves the area of the current square
+        Retrieves the size of the current square
         """
 
         return self.__size
