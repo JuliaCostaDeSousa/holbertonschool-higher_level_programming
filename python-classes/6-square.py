@@ -18,6 +18,7 @@ class Square:
 
         Args:
             size (int) : size of the square
+            position (tuple) : position must be a tuple of 2 positive integers
         """
 
         if not isinstance(size, (int)):
