@@ -84,7 +84,7 @@ class Square:
         Prints in stdout the square with the character #
         If size is equal to 0, print an empty line
         """
-        if self.size == 0:
+        if self.__size == 0:
             print()
             return
         
