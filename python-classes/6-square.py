@@ -87,7 +87,7 @@ class Square:
         if self.__size == 0:
             print()
             return
-        
+
         for h in range(self.__position[1]):
             print()
         if self.__size != 0:
