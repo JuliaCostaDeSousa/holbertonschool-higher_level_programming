@@ -98,14 +98,9 @@ class Rectangle:
         result = ""
         symbol = getattr(self, "print_symbol", Rectangle.print_symbol)
 
-        if isinstance(symbol, list):
-            to_print = str(symbol)
-        else:
-            to_print = symbol
-
         for i in range(self.__height):
             for j in range(self.__width):
-                result += to_print
+                result += str(symbol)
             if i != self.__height - 1:
                 result += "\n"
 
@@ -129,7 +124,6 @@ class Rectangle:
 
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-        del self
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
