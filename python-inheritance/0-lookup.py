@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a function that returns 
+This module provides a function that returns
 the list of available attributes and methods of an object
 """
 
@@ -13,5 +13,5 @@ def lookup(obj):
 
     if not obj:
         return None
-    
+
     return dir(obj)
