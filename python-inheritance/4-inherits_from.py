@@ -2,7 +2,7 @@
 """
 This module provides a function that returns
 True if the object is an instance of a class that inherited
-from the specified class ; otherwise False.
+from the specified class^yc  otherwise False.
 """
 
 
