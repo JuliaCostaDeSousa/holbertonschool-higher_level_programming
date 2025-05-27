@@ -23,7 +23,7 @@ class Square(Rectangle):
         Returns the rectangle description
         """
 
-        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return ("[Square] {}/{}".format(self.__width, self.__height))
 
     def area(self):
         """
