@@ -58,7 +58,7 @@ class Dragon(SwimMixin, FlyMixin):
 
     def sing(self):
         """
-        Makes the dragon sing 
+        Makes the dragon sing
         """
 
         print("The dragon is singing Through the Fire and Flames!")
