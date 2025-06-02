@@ -23,12 +23,11 @@ class Student():
         Returns the dictionary description for JSON serialization of an object
         """
 
-        if type(attrs) == list:
+        if type(attrs) is list:
             attr_dic = {}
             for element in attrs:
-                if type(element) == str and hasattr(self, element):
+                if type(element) is str and hasattr(self, element):
                     attr_dic[element] = getattr(self, element)
             return attr_dic
         else:
             return self.__dict__
-        
