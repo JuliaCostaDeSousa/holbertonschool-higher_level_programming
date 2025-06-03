@@ -10,7 +10,7 @@ def pascal_triangle(n):
     """
 
     if n <= 0:
-        return [[]]
+        return []
     if n == 1:
         return [[1]]
 
