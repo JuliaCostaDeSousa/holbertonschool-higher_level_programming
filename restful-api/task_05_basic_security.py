@@ -13,8 +13,8 @@ from werkzeug.security import check_password_hash
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 users = {
-    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "admin"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "user"}
+    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
+    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
 }
 app.config["JWT_SECRET_KEY"] = "ton_secret_ultra_secret"
 jwt = JWTManager(app)
@@ -81,6 +81,15 @@ def login():
         return jsonify({"error": "Invalid credentials"}), 401
     access_token = create_access_token(identity=username, additional_claims={"role": user.get("role", "user")})
     return jsonify(access_token=access_token)
+
+
+@app.route("/jwt-protected")
+@jwt_required()
+def jwt_protected():
+    """
+    JWT protected route
+    """
+    return "JWT Auth: Access Granted"
 
 
 @app.route("/admin-only")
