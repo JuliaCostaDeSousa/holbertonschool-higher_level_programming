@@ -19,7 +19,6 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
 
-    state_to_search = sys.argv[4]
     Session = sessionmaker(bind=engine)
     session = Session()
 
