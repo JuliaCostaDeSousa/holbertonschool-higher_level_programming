@@ -7,6 +7,9 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """
+    Print all cities of a state
+    """
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
