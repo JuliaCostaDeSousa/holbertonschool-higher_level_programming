@@ -4,21 +4,8 @@ Lists all State objects from the database hbtn_0e_6_usa
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, String
 import sys
-
-Base = declarative_base()
-
-
-class State(Base):
-    """
-    Class for state
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(128), nullable=False)
-
+from model_state import Base, State
 
 if __name__ == "__main__":
     """
