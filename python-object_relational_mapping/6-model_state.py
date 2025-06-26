@@ -9,7 +9,8 @@ from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     """
-    Connect to server
+    Connects to the database and lists all State objects,
+    sorted by id in ascending order.
     """
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(
