@@ -23,7 +23,8 @@ if __name__ == "__main__":
         .format(state_name)
     cur.execute(query)
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    if rows:
+        for row in rows:
+            print(row)
     cur.close()
     db.close()
