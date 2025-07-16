@@ -10,15 +10,15 @@ def generate_invitations(template, attendees):
     """
 
     if not isinstance(template, str):
-        print("Invalid input type: {}".format(type(template)))
+        print("{}".format(type(template)))
         return    
     if not isinstance(attendees, list):
-        print("Invalid input type: {}".format(type(attendees)))
+        print("{}".format(type(attendees)))
         return
     else:
         for i in range(len(attendees)):
             if not isinstance(attendees[i], dict):
-                print("Invalid input type: {}".format(type(attendees[i])))
+                print("{}".format(type(attendees[i])))
                 return
 
     if not template or template == "":
