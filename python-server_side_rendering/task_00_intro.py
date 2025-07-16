@@ -2,7 +2,6 @@
 """
 Module generate_invitations
 """
-import os
 
 
 def generate_invitations(template, attendees):
@@ -11,19 +10,24 @@ def generate_invitations(template, attendees):
     """
 
     if not isinstance(template, str):
-        raise TypeError('{}'.format(type(template)))
+        print("Invalid input type: {}".format(type(template)))
+        return    
     if not isinstance(attendees, list):
-        raise TypeError('{}'.format(type(attendees)))
+        print("Invalid input type: {}".format(type(attendees)))
+        return
     else:
         for i in range(len(attendees)):
             if not isinstance(attendees[i], dict):
-                raise TypeError('{}'.format(type(attendees[i])))
+                print("Invalid input type: {}".format(type(attendees[i])))
+                return
 
     if not template or template == "":
-        raise ValueError('Template is empty, no output files generated.')
+        print('Template is empty, no output files generated.')
+        return
 
     if not attendees or attendees == []:
-        raise ValueError('No data provided, no output files generated.')
+        print('No data provided, no output files generated.')
+        return
 
     replace_fields = ['name', 'event_title', 'event_date', 'event_location']
 
